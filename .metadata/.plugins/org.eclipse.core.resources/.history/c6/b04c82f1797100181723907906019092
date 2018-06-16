@@ -1,0 +1,23 @@
+package com.example.demo;
+
+import javax.persistence.Entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class Beer {
+	public Beer(String name) {
+        this.name = name;
+    }
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String name;
+}
